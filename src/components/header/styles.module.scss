@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+.header{
+    top: 0  ;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start;
+    box-shadow: 0px 2px lightgrey;
+    background-color: white;
+    color: #0F60C2;
+    
+    h1{
+        font-family: rubik;
+        font-weight: 500;
+    }
+}
+

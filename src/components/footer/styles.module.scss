@@ -1,0 +1,23 @@
+.foot {
+    box-sizing: border-box;
+    width: 100vw;
+    // height: 111px;
+    background-color: #0F60C2;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1rem;
+    line-height: 1rem;
+
+    h3 {
+        font-size: 18px;
+    }
+
+    @media (min-width: 1024px) {
+     
+        padding: 3rem 11rem 2rem 11rem;
+    }
+}
+
+// padding: 3rem 11rem 2rem 11rem;

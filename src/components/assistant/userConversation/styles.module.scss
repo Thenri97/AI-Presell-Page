@@ -1,0 +1,28 @@
+.balaoUs {
+  float: left;
+    background-color: #60C20F;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0 5px 5px;
+    position: relative;
+    max-width: 80%;
+    width: 70vw;
+    margin-left: 10%;
+    color: white;
+  }
+  
+  .balaoUs::before {
+    content: "";
+    position: absolute;
+    // top: 10px;
+    bottom: 0.4rem;
+    left: 100%; /* Alterado de right para left */
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #60C20F
+    ; /* Alterado de border-right para border-left */
+    border-bottom: 5px solid transparent;
+  }
+  

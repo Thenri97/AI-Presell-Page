@@ -1,0 +1,330 @@
+.header {
+    height: 5vh;
+    width: 100vw;
+    // background-color: lightblue;
+
+    display: flex;
+    justify-content: space-around;
+    // align-items: center;
+
+    position: fixed;
+}
+
+.main {
+    margin-top: 4rem;
+    // height: 95vh;
+    background-color: white;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+
+    @media (min-width: 1024px) {
+        /* Estilos específicos para resoluções maiores que 1024px */
+        padding: 0 11rem 0 11rem;
+        /* Exemplo de alteração de padding */
+    }
+
+}
+
+
+.openDiv {
+    z-index: 9999;
+    max-width: 230px;
+    right: 4rem;
+    bottom: 3rem;
+    height: 3rem;
+    position: fixed;
+    padding: 0.5rem;
+    width: 60vw;
+    margin-top: 5vh;
+    background-color: #ffffff00;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: 1024px) {
+        /* Estilos específicos para resoluções maiores que 1024px */
+        right: 6rem;
+        /* Exemplo de alteração de padding */
+    }
+
+
+    button {
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        margin-left: 0.4rem;
+        border: none;
+        border-radius: 5px;
+        height: 35px;
+        width: 50%;
+
+        background-color: #473BF0;
+        color: white;
+
+    }
+
+    span {
+        position: absolute;
+        right: -4rem;
+        top: -0.6rem;
+        z-index: 1;
+    }
+
+
+    animation: slideIn 1s forwards;
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(100%);
+            /* Começa à esquerda */
+        }
+
+        100% {
+            transform: translateX(0);
+            /* Termina à direita */
+        }
+    }
+}
+
+
+.messageButton {
+    z-index: 9999;
+    position: fixed;
+    right: 1rem;
+    bottom: 3rem;
+    color: #60C20F;
+}
+
+.profileDiv {
+    display: flex;
+    padding: 0.4rem 0 0 0;
+    flex-direction: row-reverse;
+    height: 100%;
+    align-items: flex-end;
+
+    img {
+
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 0.5rem;
+        position: absolute;
+        right: -3rem;
+        top: 1rem;
+        z-index: 1;
+    }
+}
+
+
+.banner {
+    // overflow-y: scroll;
+    // height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0.5rem;
+
+    img {
+        // width: 100%;
+        // height: 50vw;
+        border-radius: 10px;
+    }
+
+    p {
+        color: #0F60C2;
+        font-family: inter;
+        font-size: 16px;
+    }
+}
+
+
+.bannerImgDiv {
+    display: flex;
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.bannerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h4 {
+        color: #F64B4B;
+        font-size: 13px;
+        font-weight: bold;
+
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        font-weight: bold;
+        color: #161C2D;
+    }
+
+}
+
+
+.whySection {
+
+    // height: 9vh;
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+    margin-top: 3rem;
+
+    h1 {
+        font-size: 26px;
+        color: #60C20F;
+    }
+}
+
+// .ourServicesList {
+//     display: flex;
+//     gap: 1rem;
+//     // flex-direction: column;
+//     overflow-x: scroll;
+//     height: 100%;
+//     padding: 0.5rem;
+
+//     li {
+//         display: flex;
+//         border: 1px solid #87CEFA;
+//         flex-direction: column;
+//         gap: 0.5rem;
+//         border-radius: 10px;
+//         width: 200px;
+//         box-shadow: 3px 2px;
+//         height: 90%;
+//         padding: 0.5rem;
+//         background-color: #0F60C2;
+//         color: white;
+//     }
+
+//     h2 {
+
+//         font-size: 20px;
+//         color: white;
+//     }
+
+// }
+
+// .ourServicesList {
+//     display: flex;
+//     gap: 1rem;
+//     flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+//     padding: 0.5rem;
+
+//     li {
+//         width: 200px; /* Defina a largura desejada em pixels */
+//         min-width: 200px; /* Garante que a largura mínima seja respeitada */
+//         flex-shrink: 0; /* Evita que os itens encolham para ajustar */
+//         border: 1px solid #87CEFA;
+//         border-radius: 10px;
+//         box-shadow: 3px 2px;
+//         padding: 0.5rem;
+//         background-color: #0F60C2;
+//         color: white;
+//     }
+
+//     h2 {
+//         font-size: 20px;
+//         color: white;
+//     }
+// }
+
+
+
+
+.whySection {
+
+    h1 {
+        color: #C20F60 !important;
+    }
+
+    :focus {
+        li{
+
+            animation: slide-in 1s ease-in-out 0s forwards;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0.5rem;
+
+        @media (min-width: 1024px) {
+
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+
+
+        li {
+            display: flex;
+            border-radius: 10px;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background-color: white;
+            box-shadow: 5px 6px #00E0FF;
+            max-width: 550px;
+
+            // animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slide-in {
+
+            /* No início da animação, o elemento está fora da tela à esquerda */
+            0% {
+                transform: translateX(-100%);
+            }
+
+            /* No final da animação, o elemento está na posição original */
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Use a propriedade animation-delay para criar um intervalo entre as animações dos elementos li */
+      
+        li:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        li:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        li:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+
+
+
+        h2 {
+            font-size: 20px;
+            color: #C20F60 !important;
+        }
+
+        p {
+            color: #0F60C2;
+        }
+
+    }
+}
+
+// teste

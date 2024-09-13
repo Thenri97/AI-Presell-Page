@@ -1,0 +1,52 @@
+.ourServicesContainer {
+
+    height: 55vh;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin-top: 3rem;
+
+    h1 {
+        font-size: 26px;
+        color: #60C20F;
+        margin-left: 0.5rem;
+    }
+}
+
+.ourServicesList {
+    height: 80%;
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+    // white-space: nowrap; /* Impede que os itens sejam quebrados em várias linhas */
+    overflow-x: scroll;
+
+    li {
+        text-align: center;
+        justify-content: center;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        height: 250px;
+        border: 1px solid #87CEFA;
+        border-radius: 10px;
+        box-shadow: 3px 2px;
+        padding: 0.5rem;
+        background-color: #0F60C2;
+        color: white;
+        min-width: 150px; /* Defina uma largura mínima para os itens */
+        min-height: 250px;
+        flex: 0 0 auto; /* Impede que os itens cresçam para preencher o espaço */
+    }
+
+    h2 {
+        font-size: 20px;
+        color: white;
+    }
+
+    @media (min-width: 1440px) {
+     
+        overflow: hidden;
+    }
+}

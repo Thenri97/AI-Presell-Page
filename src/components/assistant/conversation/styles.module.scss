@@ -1,0 +1,31 @@
+@import "../../../styles/globalStyles.scss";
+
+.balao {
+    float: left;
+    // background-color: #dad8d8;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0 5px 5px;
+    position: relative;
+    max-width: 80%;
+    // background-image: linear-gradient(to right, var(--blue--two), rgb(236, 236, 236));
+    color: white;
+    background-color: #0F60C2;
+
+    width: 70vw;
+    // max-height: 35vh;
+  }
+  
+  .balao::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 100%;
+    margin-top: -5px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 5px solid #0F60C2;  
+    border-bottom: 5px solid transparent;
+  }
+  
