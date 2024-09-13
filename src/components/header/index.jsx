@@ -40,9 +40,9 @@ export const Header = () => {
                 openModal === true? setMenu(false) : null
             }
             {menu === true ? <Menu /> : null}
-            <span>Home</span>
+            {/* <span>Home</span> */}
             {/* <h1>OdontoMais</h1> */}
-            <h1>WRA Odontologia</h1>
+            <h1>Entrega Fácil Store</h1>
 
             
 
