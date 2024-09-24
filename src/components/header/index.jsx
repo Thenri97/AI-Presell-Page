@@ -5,6 +5,8 @@ import { IoMdMenu } from "react-icons/io";
 import { ModalContext } from "../../providers/ModalContext";
 
 import { IoCloseSharp } from "react-icons/io5";
+import { ProductList } from "../write(tutorial)";
+
 
 
 
@@ -33,7 +35,7 @@ export const Header = () => {
         <header className={styles.header}>
 
             {
-                menu === true ? <IoCloseSharp size={36} onClick={() => setMenu(false)} /> : <IoMdMenu size={36} onClick={() => closeAssistant()} />
+                menu === true ? <IoCloseSharp  className={styles.menu} size={36} onClick={() => setMenu(false)} /> : <IoMdMenu className={styles.menu} size={36} onClick={() => closeAssistant()} />
             }
 
             {
@@ -43,6 +45,7 @@ export const Header = () => {
             {/* <span>Home</span> */}
             {/* <h1>OdontoMais</h1> */}
             <h1>Entrega Fácil Store</h1>
+            <ProductList/>
 
             
 

@@ -129,7 +129,7 @@ export const HomePage = () => {
                  } */}
 
                 </section>
-             
+             <Footer/>
             </body>
 
 

@@ -17,6 +17,7 @@ import sound from "../../assets/mixkit-dry-pop-up-notification-alert-2356.wav"
 
 export const Assistant = () => {
 
+
     const openai = new OpenAI({
 
         apiKey: import.meta.env.VITE_OPENAI_API_KEY,
@@ -41,7 +42,7 @@ export const Assistant = () => {
 
         let emptyThread = localStorage.getItem('emptyThread');
 
-        emptyThread ? localStorage.removeItem("emptyThread"): null
+        emptyThread ? localStorage.removeItem("emptyThread") : null
 
 
     }, []
@@ -184,7 +185,7 @@ export const Assistant = () => {
 
     const main = async () => {
 
-        const myAssistant = await openai.beta.assistants.retrieve("asst_BEiDYw82jnBhq72bH2IedYyk")
+        const myAssistant = await openai.beta.assistants.retrieve("asst_wajpn9zegEDhgHgtMs9yhmg3")
 
 
 
@@ -235,10 +236,10 @@ export const Assistant = () => {
 
                     if (!agendamento) {
 
-                        if (messageList.some(item => item.text.includes("efetuada com sucesso"))) {
+                        if (messageList.some(item => item.text.includes("Seu pedido foi confirmado"))) {
 
 
-                            localStorage.setItem("Agendamento", JSON.stringify('efetuada com sucesso'))
+                            localStorage.setItem("Agendamento", JSON.stringify("Seu pedido foi confirmado"))
 
                             const messList = localStorage.getItem('messageList');
                             const messListConvert = JSON.parse(messList);
@@ -251,7 +252,7 @@ export const Assistant = () => {
                                 const emptyThread = await openai.beta.threads.create();
                                 // Armazenar emptyThread no localStorage
                                 localStorage.setItem('emptyThread', JSON.stringify(emptyThread));
-                
+
                             }
                             startThread()
                             // localStorage.removeItem("messageList")
@@ -354,7 +355,7 @@ export const Assistant = () => {
         const containsSequence = messageList.some(item => {
             // Verificando se a propriedade 'text' contém 8 ou 9 números em sequência
             return /\b\d{9,11}\b/.test(item.text);
-          });
+        });
 
 
         if (!agendamento && containsSequence) {

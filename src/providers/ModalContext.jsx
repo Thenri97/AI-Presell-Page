@@ -43,7 +43,7 @@ export const ModalProvider = ({ children }) => {
     // Adicione mais mensagens conforme necessário
   ];
 
-  const serviceID = 'service_r5i6cjv';
+  const serviceID = 'service_6xyluw8';
   const templateID = 'template_6r5p2o7';
   const publicKey = 'dR_L-aG6FJty5DJqU';
 
@@ -57,7 +57,7 @@ export const ModalProvider = ({ children }) => {
   const [messageList, setMessageList] = useState([{ text: `Olá! Antes de começarmos, poderia fornecer seu nome completo, número de telefone e, se possível, seu email? Isso nos ajudará a garantir um atendimento mais eficiente. Obrigado!`, isUser: false }])
 
 
-  const [a,setA] = useState(true)
+  const [a, setA] = useState(true)
 
 
 
@@ -115,10 +115,28 @@ export const ModalProvider = ({ children }) => {
   const [popUp, setPopUp] = useState(false)
   const [isTyping, setIsTyping] = useState(0)
 
+  const [taskModalIsOpen, setTaskModalIsOpen] = useState(false);
+
+
+//LISTA DE TASKS
+const [tasksList, setTaskList] = useState([]);
+  //EDIÇÃO DE TASKS
+  const [editedName, setEditedName] = useState("");
+  const [editedDescription, SetEditedDescription] = useState("");
+  const [newEditedTime, setNewEditedTime] = useState(null);
+
+  const [getTask, setGetTask] = useState();
+  const [taskId, setTaskId] = useState(1);
+
+
+
 
   return (
-    <ModalContext.Provider value={{ names, chosenName, setChosenName, mess, asadas, setOpenModal, openModal, sendEmail, sendEmailTwo,
-     menu, setMenu, messageList, setMessageList, a, setA,popUp, setPopUp, isTyping, setIsTyping}}>
+    <ModalContext.Provider value={{
+      names, chosenName, setChosenName, mess, asadas, setOpenModal, openModal, sendEmail, sendEmailTwo,
+      menu, setMenu, messageList, setMessageList, a, setA, popUp, setPopUp, isTyping, setIsTyping, taskModalIsOpen, setTaskModalIsOpen,
+      editedName,setEditedName,editedDescription,setEditedName,newEditedTime,setNewEditedTime,SetEditedDescription,tasksList,setTaskList,getTask,setGetTask,taskId,setTaskId
+    }}>
       {children}
     </ModalContext.Provider>
   );

@@ -5,11 +5,11 @@ export const DefaultTemplate = ({ children }) => {
     return (
         <>
 
-            <Header />
+            {/* <Header /> */}
             <main>
                 {children}
             </main>
-            <Footer />
+            {/* <Footer /> */}
         </>
 
     )
