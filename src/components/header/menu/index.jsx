@@ -9,7 +9,7 @@ export const Menu = () => {
         <section className={styles.menu}>
 
             <div>
-                <div className={styles.buttonDiv}>
+                {/* <div className={styles.buttonDiv}>
                     <button>Procedimentos</button>
                     <FaArrowRight size={24}/>
 
@@ -17,10 +17,11 @@ export const Menu = () => {
                 <div className={styles.buttonDiv}>
                     <button>Equipe</button>
                     <FaArrowRight size={24}/>
-                </div>
+                </div> */}
                 <div className={styles.buttonDiv}>
 
-                    <a href="https://calendar.google.com/calendar/u/0/embed?src=aa65d1470e9eaeb2c7d095d01b4b672f6f6e03da98d98f7e897980772f2e1c2b@group.calendar.google.com&ctz=America/Sao_Paulo" target="_blank">Ver agenda </a>
+                    {/* <a href="https://calendar.google.com/calendar/u/0/embed?src=aa65d1470e9eaeb2c7d095d01b4b672f6f6e03da98d98f7e897980772f2e1c2b@group.calendar.google.com&ctz=America/Sao_Paulo" target="_blank">Ver agenda </a> */}
+                   <a href="">login</a>
                     <FaArrowRight size={24}/>
                 </div>
             </div>

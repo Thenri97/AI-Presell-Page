@@ -5,6 +5,7 @@ import { DefaultTemplate } from './pages/defalutTemplate'
 import { AdmPage } from './pages/admUserPage'
 import { EditTaskModal } from './components/editTaskModal'
 import { ModalContext } from './providers/ModalContext'
+import { LoginPage } from './pages/Login'
 
 
 function App() {
@@ -28,8 +29,9 @@ function App() {
   return (
     <>
       <DefaultTemplate>
-        {/* <HomePage /> */}
-        <AdmPage />
+        <HomePage />
+        {/* <AdmPage /> */}
+        {/* <LoginPage/> */}
         {taskModalIsOpen ? <EditTaskModal task={selectedTask} onClose={onClose} onSave={onSave} /> : null}
       </DefaultTemplate>
     </>
